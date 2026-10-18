@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Love — 20.10 ❤️</title>
+  <meta name="description" content="Một món quà kỹ thuật số chứa đầy tình yêu, dành tặng em nhân ngày Phụ nữ Việt Nam 20.10.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23e6396b' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+<canvas id="loveCanvas" aria-hidden="true"></canvas>
+
+<svg width="0" height="0" aria-hidden="true">
+  <defs>
+    <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
+      <path d="M.5,.98 C.28,.8 .02,.58 .02,.34 .02,.16 .15,.04 .3,.04 .4,.04 .47,.1 .5,.16 .53,.1 .6,.04 .7,.04 .85,.04 .98,.16 .98,.34 .98,.58 .72,.8 .5,.98Z"/>
+    </clipPath>
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5f8f"/>
+      <stop offset=".5" stop-color="#e6396b"/>
+      <stop offset="1" stop-color="#c77dff"/>
+    </linearGradient>
+    <symbol id="heart" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ═══════════ MÀN HÌNH MỞ ĐẦU ═══════════ -->
+<div id="intro">
+  <div class="intro-gradient" aria-hidden="true"></div>
+  <div class="intro-hearts" id="introHearts" aria-hidden="true"></div>
+  <div class="intro-stage">
+    <div class="envelope-wrap" id="envelopeWrap">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Mở phong thư tình yêu">
+        <div class="envelope-back"></div>
+        <div class="envelope-letter">
+          <div class="env-text">
+            <svg class="env-heart"><use href="#heart"/></svg>
+            <p>Anh có một món quà đặc biệt<br>dành cho em... 💌</p>
+          </div>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap">
+          <div class="envelope-seal"><svg><use href="#heart"/></svg></div>
+        </div>
+      </div>
+      <p class="env-hint">Nhấn vào phong thư để mở nhé 💗</p>
+    </div>
+    <button class="open-gift" id="openGiftBtn">
+      <span class="og-heart"><svg><use href="#heart"/></svg></span>
+      <span class="og-label">Mở món quà tình yêu ❤️</span>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════ WEBSITE CHÍNH ═══════════ -->
+<main id="site" hidden>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="petals" id="petals" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Our Love — 20.10 🌸</p>
+      <h1 class="hero-title" id="heroTitle">Chúc Công Chúa Của Anh 20/10 Thật Hạnh Phúc 💖</h1>
+      <p class="hero-sub" id="heroSub">Cảm ơn em vì đã xuất hiện và khiến những ngày bình thường của anh trở nên đặc biệt hơn.</p>
+      <div class="big-heart-wrap" aria-hidden="true">
+        <div class="orbit cw" style="--r:150px;--d:14s"><span class="mini-heart" style="color:#ff6b9d;--s:26px"><svg><use href="#heart"/></svg></span></div>
+        <div class="orbit ccw" style="--r:120px;--d:11s"><span class="mini-heart" style="color:#c77dff;--s:20px"><svg><use href="#heart"/></svg></span></div>
+        <div class="orbit cw" style="--r:95px;--d:9s"><span class="mini-heart" style="color:#e6396b;--s:16px"><svg><use href="#heart"/></svg></span></div>
+        <div class="orbit ccw" style="--r:170px;--d:18s"><span class="mini-heart" style="color:#ffb3c6;--s:18px"><svg><use href="#heart"/></svg></span></div>
+        <div class="orbit cw" style="--r:70px;--d:7s"><span class="mini-heart" style="color:#ff8fb3;--s:14px"><svg><use href="#heart"/></svg></span></div>
+        <div class="orbit ccw" style="--r:135px;--d:16s"><span class="mini-heart" style="color:#d6336c;--s:22px"><svg><use href="#heart"/></svg></span></div>
+        <div class="heart-glow"></div>
+        <div class="big-heart"><svg><use href="#heart"/></svg></div>
+      </div>
+      <button class="btn-hug" id="hugBtn"><svg class="btn-ico"><use href="#heart"/></svg>Gửi em một cái ôm ❤️</button>
+      <p class="hug-msg" id="hugMsg">Ôm em thật chặt nè 🤗💗</p>
+    </div>
+    <a class="scroll-down" href="#letter" aria-label="Cuộn xuống thư"><svg><use href="#heart"/></svg></a>
+  </section>
+
+  <!-- LOVE LETTER -->
+  <section class="section letter-section" id="letter">
+    <h2 class="section-title reveal">Lời Nhắn Dành Riêng Cho Em 💌</h2>
+    <p class="section-sub reveal">Một lá thư nhỏ, được viết bằng cả trái tim anh</p>
+    <div class="letter-glass reveal" id="letterGlass">
+      <div class="edge-hearts" id="edgeHearts" aria-hidden="true"></div>
+      <div class="letter-paper" id="letterPaper">
+        <p class="letter-line">Em yêu à! ❤️</p>
+        <p class="letter-line">Nhân ngày 20/10, anh muốn gửi đến em những lời chúc ngọt ngào nhất. Chúc em luôn vui vẻ, luôn mỉm cười và luôn gặp thật nhiều điều tốt đẹp trong cuộc sống. 💖</p>
+        <p class="letter-line">Anh mong rằng mỗi ngày của em đều rộn rã tiếng cười, và nếu có lúc em mệt mỏi, hãy nhớ rằng luôn có anh ở đây — sẵn sàng ôm em thật chặt. 🤗</p>
+        <p class="letter-line">Cảm ơn em vì đã luôn bên anh, vì đã kiên nhẫn với những lúc anh vụng về, và vì đã yêu anh bằng cả trái tim. ❤️</p>
+        <p class="letter-line">Với anh, em là món quà tuyệt vời nhất mà cuộc sống này đã dành tặng. 🎁</p>
+        <p class="letter-line">Chúc em ngày 20/10 thật hạnh phúc nhé, công chúa của anh! 👑</p>
+        <p class="letter-line letter-sign">— Người yêu em nhiều nhất 💗</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEART FORMATION — cụm trái tim nhỏ tạo thành trái tim lớn -->
+  <div class="formation-wrap reveal" aria-hidden="true">
+    <div class="heart-formation" id="heartFormation"></div>
+    <p class="formation-cap">Mỗi trái tim nhỏ là một lý do — và tất cả chúng đều là em 💗</p>
+  </div>
+
+  <!-- REASONS -->
+  <section class="section" id="reasons">
+    <h2 class="section-title reveal">Những Điều Anh Yêu Ở Em 💕</h2>
+    <p class="section-sub reveal">Mười lý do trong hàng nghìn lý do...</p>
+    <div class="reasons-grid">
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">01</span><p>Nụ cười của em khiến cả ngày tệ nhất của anh bừng sáng ✨</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">02</span><p>Em luôn biết cách làm anh cười, kể cả khi anh đang giận 😊</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">03</span><p>Trái tim em ấm áp hơn bất kỳ nơi nào anh từng biết 🔥</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">04</span><p>Em xinh đẹp theo cách mà chính em cũng chưa nhận ra 🌸</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">05</span><p>Sự quan tâm nhỏ của em khiến anh thấy được yêu thương thật nhiều 💕</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">06</span><p>Em lắng nghe cả những câu chuyện vô nghĩa nhất của anh 🌙</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">07</span><p>Em mạnh mẽ mà vẫn dịu dàng một cách kỳ diệu 🦋</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">08</span><p>Bên em, khoảnh khắc bình thường cũng thành kỷ niệm 📸</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">09</span><p>Em là người đầu tiên anh muốn báo tin khi có chuyện gì đó 👫</p></article>
+      <article class="reason-card reveal"><span class="rc-heart"><svg><use href="#heart"/></svg></span><span class="rc-num">10</span><p>Đơn giản vì em là em — điều đặc biệt nhất trên đời ❤️</p></article>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section" id="journey">
+    <h2 class="section-title reveal">Hành Trình Của Chúng Ta 💘</h2>
+    <p class="section-sub reveal">Mỗi chặng đường đều được đánh dấu bằng một trái tim</p>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-node"><svg><use href="#heart"/></svg></div>
+        <div class="tl-card"><h3>💘 Ngày đầu tiên</h3><p>Ngày anh nhận ra mình đã tìm thấy người đặc biệt của cả đời mình.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-node"><svg><use href="#heart"/></svg></div>
+        <div class="tl-card"><h3>💬 Tin nhắn đầu tiên</h3><p>Hai chữ "Chào em" mà khiến tim anh đập loạn nhịp cả buổi tối.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-node"><svg><use href="#heart"/></svg></div>
+        <div class="tl-card"><h3>☕ Buổi hẹn đầu tiên</h3><p>Anh lo lắng đến mức quên cả đường về — chỉ nhớ nụ cười của em.</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-node"><svg><use href="#heart"/></svg></div>
+        <div class="tl-card"><h3>🌹 Kỷ niệm đầu tiên</h3><p>Món quà nhỏ, kỷ niệm to, và trái tim anh đã thuộc về em từ đó.</p></div>
+      </div>
+      <div class="tl-item reveal tl-end">
+        <div class="tl-node"><svg><use href="#heart"/></svg></div>
+        <div class="tl-card"><h3>♾️ Và câu chuyện vẫn tiếp tục...</h3><p>Mỗi ngày bên em là một chương mới đẹp hơn chương trước. Dành cho em — mãi mãi ❤️</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <h2 class="section-title reveal">Kỷ Niệm Của Chúng Ta 📸</h2>
+    <p class="section-sub reveal">Mỗi trái tim là một khoảnh khắc — hãy thay ảnh của hai đứa vào đây nhé 💗</p>
+    <div class="gallery-grid">
+      <figure class="heart-frame reveal" style="--g1:#ffb3c6;--g2:#ff6b9d"><div class="ph"><span>🌸</span></div><figcaption>Ngày đầu gặp nhau</figcaption></figure>
+      <figure class="heart-frame reveal" style="--g1:#e3b8ff;--g2:#c77dff"><div class="ph"><span>😊</span></div><figcaption>Nụ cười ấy</figcaption></figure>
+      <figure class="heart-frame reveal" style="--g1:#ffd9b8;--g2:#ff9e7d"><div class="ph"><span>✈️</span></div><figcaption>Chuyến đi đầu tiên</figcaption></figure>
+      <figure class="heart-frame reveal" style="--g1:#ffc2d1;--g2:#e6396b"><div class="ph"><span>🍜</span></div><figcaption>Bữa ăn đầu tiên</figcaption></figure>
+      <figure class="heart-frame reveal" style="--g1:#d9c7ff;--g2:#a680ff"><div class="ph"><span>🌇</span></div><figcaption>Hoàng hôn bên nhau</figcaption></figure>
+      <figure class="heart-frame reveal" style="--g1:#ffb0c9;--g2:#d6336c"><div class="ph"><span>♾️</span></div><figcaption>Và mãi mãi...</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- GIFT -->
+  <section class="section gift-section" id="gift">
+    <h2 class="section-title reveal">Món Quà Bí Mật 🎁</h2>
+    <p class="section-sub reveal">Có một điều này, anh chỉ nói khi em mở hộp quà thôi...</p>
+    <div class="gift-stage">
+      <div class="gift-box" id="giftBox" role="button" tabindex="0" aria-label="Mở hộp quà bí mật">
+        <span class="gift-bow">🎀</span>
+        <div class="gift-lid"></div>
+        <div class="gift-body"><span class="gift-ribbon"></span></div>
+      </div>
+      <div class="gift-message" id="giftMessage" aria-live="polite">
+        <p class="gm-big">Em là điều tuyệt vời nhất<br>từng xảy ra với anh 💖</p>
+        <p class="gm-sub">Yêu em — hôm nay, ngày mai, và mãi mãi về sau ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-heart"><svg><use href="#heart"/></svg></div>
+    <p class="footer-line">Được làm với tất cả tình yêu — chỉ dành riêng cho em</p>
+    <p class="footer-date">Our Love · 20 . 10 ❤️</p>
+  </footer>
+
+</main>
+
+<button class="music-btn" id="musicBtn" aria-pressed="false" title="Bật / tắt nhạc lãng mạn">🎵</button>
+
+<script src="js/hearts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

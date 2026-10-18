@@ -1,0 +1,173 @@
+/* ═══════════ OUR LOVE 20.10 — BASE ═══════════ */
+:root{
+  --pink:#ff8fb3;
+  --pink-soft:#ffc2d4;
+  --pink-pale:#ffe3ec;
+  --cherry:#e6396b;
+  --red:#d6336c;
+  --purple:#c77dff;
+  --cream:#fff8f2;
+  --text:#8a3b5c;
+  --text-soft:#a86a83;
+  --glass:rgba(255,255,255,.55);
+  --shadow:0 10px 40px rgba(214,51,108,.18);
+  --font-hand:'Dancing Script',cursive;
+  --font-main:'Be Vietnam Pro',sans-serif;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:var(--font-main);
+  color:var(--text);
+  overflow-x:hidden;
+  background:linear-gradient(160deg,#fff0f6,#ffe3ec 30%,#f6e0ff 60%,#ffeef5);
+  background-attachment:fixed;
+  background-size:200% 200%;
+  animation:bgFlow 22s ease-in-out infinite alternate;
+}
+@keyframes bgFlow{
+  from{background-position:0% 0%}
+  to{background-position:100% 100%}
+}
+
+/* canvas trái tim toàn trang */
+#loveCanvas{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  pointer-events:none;
+}
+
+svg use{pointer-events:none}
+main{position:relative;z-index:2}
+
+::selection{background:#ffb3c6;color:#a10f45}
+
+/* thanh cuộn hồng */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:#ffeef4}
+::-webkit-scrollbar-thumb{background:linear-gradient(#ff8fb3,#e6396b);border-radius:8px}
+
+/* ── Nút bấm chung ── */
+.btn-hug{
+  font-family:var(--font-main);
+  font-size:1.05rem;
+  font-weight:600;
+  color:#fff;
+  background:linear-gradient(135deg,#ff6b9d,#e6396b 55%,#d6336c);
+  border:none;
+  border-radius:999px;
+  padding:15px 30px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  box-shadow:0 12px 30px rgba(230,57,107,.4),inset 0 1px 0 rgba(255,255,255,.4);
+  transition:transform .25s,box-shadow .25s;
+  position:relative;
+  overflow:hidden;
+}
+.btn-hug:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 18px 40px rgba(230,57,107,.5)}
+.btn-hug:active{transform:scale(.96)}
+.btn-hug .btn-ico{width:20px;height:20px;fill:#fff;animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{
+  0%,100%{transform:scale(1)}
+  12%{transform:scale(1.25)}
+  24%{transform:scale(1)}
+  36%{transform:scale(1.18)}
+  48%{transform:scale(1)}
+}
+
+/* ── Khối section chung ── */
+.section{
+  max-width:1100px;
+  margin:0 auto;
+  padding:100px 24px;
+  position:relative;
+}
+.section-title{
+  font-family:var(--font-hand);
+  font-weight:700;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  text-align:center;
+  line-height:1.2;
+  background:linear-gradient(135deg,#e6396b 20%,#c77dff 80%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 4px 14px rgba(230,57,107,.25));
+}
+.section-sub{
+  text-align:center;
+  color:var(--text-soft);
+  font-size:1.05rem;
+  margin-top:12px;
+  font-weight:400;
+}
+
+/* ── Hiệu ứng xuất hiện khi cuộn ── */
+.reveal{
+  opacity:0;
+  transform:translateY(36px);
+  transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.3,1.1);
+}
+.reveal.in{opacity:1;transform:none}
+
+/* ── Ký tự typewriter ── */
+.ch{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(.6em) scale(.3) rotate(10deg);
+  animation:chIn .55s cubic-bezier(.2,.7,.3,1.25) forwards;
+}
+@keyframes chIn{
+  to{opacity:1;transform:translateY(0) scale(1) rotate(0)}
+}
+
+/* ── Trái tim bay (DOM burst) ── */
+.burst-heart{
+  position:fixed;
+  z-index:200;
+  pointer-events:none;
+  animation:domBurst 1s cubic-bezier(.15,.75,.3,1) forwards;
+}
+.burst-heart svg{width:100%;height:100%;display:block}
+@keyframes domBurst{
+  0%{transform:translate(0,0) scale(.2) rotate(0deg);opacity:1}
+  70%{opacity:1}
+  100%{transform:translate(var(--tx),var(--ty)) scale(1.15) rotate(var(--rot));opacity:0}
+}
+
+/* ── Nút nhạc ── */
+.music-btn{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:150;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.8);
+  background:var(--glass);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  font-size:22px;
+  cursor:pointer;
+  box-shadow:var(--shadow);
+  transition:transform .25s;
+}
+.music-btn:hover{transform:scale(1.12)}
+.music-btn.playing{animation:musicPulse 1.6s ease-in-out infinite}
+@keyframes musicPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(230,57,107,.45)}
+  50%{box-shadow:0 0 0 14px rgba(230,57,107,0)}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .petal{animation:none}
+}
